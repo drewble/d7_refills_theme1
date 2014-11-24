@@ -30,4 +30,14 @@
         $(element).removeClass "js-fade-element-show"
         $(element).addClass "js-fade-element-hide"
 
+    #
+    ## Switch Themes
+    $('#switchtheme-switch-form').prependTo("body").hover (->
+      $(this).addClass "show"
+    ), ->
+      $(this).removeClass "show"
+
+    $('#edit-theme').change ->
+      $('#switchtheme-switch-form').submit()
+
 ) jQuery

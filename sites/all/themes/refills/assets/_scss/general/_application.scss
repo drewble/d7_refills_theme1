@@ -54,3 +54,36 @@
   z-index: 9999;
 }
 
+// SwitchTheme
+#switchtheme-switch-form {
+  height: 20px;
+  opacity: .6;
+  position: absolute;
+  right: -100px;
+  top: 100px;
+  z-index: 10;
+
+  &:before {
+    background-color:#fff;
+    color: #000;
+    content:"Switch Themes";
+    left: -71px;
+    padding:5%;
+    position: absolute;
+    top:0;
+  }
+
+  .form-actions {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  &.show {
+    right: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}

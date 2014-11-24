@@ -14,7 +14,7 @@
       });
       element = $(".fade-in-element");
       $(element).addClass("js-fade-element-hide");
-      return $(window).scroll(function() {
+      $(window).scroll(function() {
         var distanceFromBottomToAppear, elementTopToPageTop, elementTopToWindowBottom, elementTopToWindowTop, windowInnerHeight, windowTopToPageTop;
         elementTopToPageTop = $(element).offset().top;
         windowTopToPageTop = $(window).scrollTop();
@@ -28,6 +28,14 @@
           $(element).removeClass("js-fade-element-show");
           return $(element).addClass("js-fade-element-hide");
         }
+      });
+      $('#switchtheme-switch-form').prependTo("body").hover((function() {
+        return $(this).addClass("show");
+      }), function() {
+        return $(this).removeClass("show");
+      });
+      return $('#edit-theme').change(function() {
+        return $('#switchtheme-switch-form').submit();
       });
     });
   })(jQuery);

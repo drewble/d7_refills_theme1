@@ -500,7 +500,7 @@ function d7_news_views_default_views() {
   $handler->display->display_options['style_options']['row_class'] = 'grid-item [promote]';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['style_options']['class'] = 'grid-items';
+  $handler->display->display_options['style_options']['class'] = 'grid-items-lines';
   $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;

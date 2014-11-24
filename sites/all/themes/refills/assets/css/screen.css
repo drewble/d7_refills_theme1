@@ -483,6 +483,30 @@ ul.tabs {
 #admin-menu {
   z-index: 9999; }
 
+#switchtheme-switch-form {
+  height: 20px;
+  opacity: .6;
+  position: absolute;
+  right: -100px;
+  top: 100px;
+  z-index: 10; }
+  #switchtheme-switch-form:before {
+    background-color: #fff;
+    color: #000;
+    content: "Switch Themes";
+    left: -71px;
+    padding: 5%;
+    position: absolute;
+    top: 0; }
+  #switchtheme-switch-form .form-actions {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+  #switchtheme-switch-form.show {
+    right: 0; }
+    #switchtheme-switch-form.show:before {
+      display: none; }
+
 /* Components
  * -----------------------------------------------------------------------------*/
 header.navigation {
