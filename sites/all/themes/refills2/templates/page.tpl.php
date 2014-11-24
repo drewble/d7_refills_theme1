@@ -12,7 +12,7 @@
 
 <header class="centered-navigation">
   <div class="centered-navigation-wrapper">
-    <a href="javascript:void(0)" class="mobile-logo">
+    <a href="/" class="mobile-logo">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
     </a>
     <a href="" class="centered-navigation-menu-button" id="js-mobile-menu">MENU</a>

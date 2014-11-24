@@ -757,12 +757,13 @@ header.navigation {
   background-color: transparent;
   border-bottom: 1px solid transparent;
   font-family: "Sanchez", serif;
-  margin-top: 4em;
+  margin-bottom: 4em;
   width: 100%;
   z-index: 499; }
   @media screen and (min-width: 53.75em) {
     .centered-navigation {
-      height: 60px; } }
+      height: 60px;
+      margin: 4em 0 4em; } }
   .centered-navigation .mobile-logo {
     display: inline;
     float: left;
@@ -977,14 +978,13 @@ header.navigation {
 
 .intro-text {
   margin-bottom: 5em;
-  margin-top: 4em;
   text-align: center; }
   @media screen and (min-width: 53.75em) {
     .intro-text {
       margin: 4em auto 6em;
       width: 60%; } }
   .intro-text h1 {
-    font-family: "Sanchez", serif;
+    font-family: "Questrial", sans-serif;
     font-weight: 800;
     margin-bottom: .3em; }
     @media screen and (min-width: 53.75em) {
@@ -1212,7 +1212,7 @@ header.navigation {
     background: white; }
 
 .footer {
-  background: #40526b;
+  background: #537fbe;
   margin-top: 4em;
   padding: 3em 20px;
   width: 100%; }

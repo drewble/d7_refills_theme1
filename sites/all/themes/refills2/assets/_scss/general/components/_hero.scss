@@ -58,7 +58,6 @@
   $intro-text-width: 60%;
 
   margin-bottom: 5em;
-  margin-top: 4em;
   text-align: center;
   @include media($large-screen) {
     margin: 4em auto 6em;
@@ -66,7 +65,7 @@
   }
 
   h1 {
-    font-family: $serif;
+    font-family: $sans-serif;
     font-weight: 800;
     margin-bottom: .3em;
 
