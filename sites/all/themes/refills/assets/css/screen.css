@@ -498,11 +498,14 @@ ul.tabs {
     padding: 7%;
     position: absolute;
     top: 0; }
+  #switchtheme-switch-form #edit-widget {
+    padding: 7% 0; }
   #switchtheme-switch-form .form-actions {
     height: 0;
     overflow: hidden;
     visibility: hidden; }
   #switchtheme-switch-form.show {
+    opacity: 1;
     right: 0; }
     #switchtheme-switch-form.show:before {
       display: none; }

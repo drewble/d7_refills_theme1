@@ -73,6 +73,10 @@
     top:0;
   }
 
+  #edit-widget {
+    padding: 7% 0;
+  }
+
   .form-actions {
     height: 0;
     overflow: hidden;
@@ -80,6 +84,7 @@
   }
 
   &.show {
+    opacity: 1;
     right: 0;
 
     &:before {
