@@ -4,7 +4,7 @@
 */
 
 
-function new_breadcrumb($vars) {
+function refills_breadcrumb($vars) {
   $breadcrumb = $vars['breadcrumb'];
   if (!empty($breadcrumb)) {
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
@@ -13,12 +13,12 @@ function new_breadcrumb($vars) {
   }
 }
 /*
-function new_preprocess_html(&$vars) {
+function refills_preprocess_html(&$vars) {
   //  kpr($vars['content']);
 }
 */
 
-function new_preprocess_page(&$vars,$hook) {
+function refills_preprocess_page(&$vars,$hook) {
 
   //googlefont
   drupal_add_css('//fonts.googleapis.com/css?family=Questrial','external');
@@ -27,12 +27,12 @@ function new_preprocess_page(&$vars,$hook) {
 }
 
 /*
-function new_preprocess_region(&$vars,$hook) {
+function refills_preprocess_region(&$vars,$hook) {
   //  kpr($vars['content']);
 }
 */
 /*
-function new_preprocess_block(&$vars, $hook) {
+function refills_preprocess_block(&$vars, $hook) {
   //  kpr($vars['content']);
 
   //lets look for unique block in a region $region-$blockcreator-$delta
@@ -72,7 +72,7 @@ function new_preprocess_block(&$vars, $hook) {
 }
 */
 /*
-function new_preprocess_node(&$vars,$hook) {
+function refills_preprocess_node(&$vars,$hook) {
   //  kpr($vars['content']);
 
   // add a nodeblock
@@ -82,12 +82,12 @@ function new_preprocess_node(&$vars,$hook) {
 }
 */
 /*
-function new_preprocess_comment(&$vars,$hook) {
+function refills_preprocess_comment(&$vars,$hook) {
   //  kpr($vars['content']);
 }
 */
 /*
-function new_preprocess_field(&$vars,$hook) {
+function refills_preprocess_field(&$vars,$hook) {
   //  kpr($vars['content']);
   //add class to a specific field
   switch ($vars['element']['#field_name']) {
@@ -108,12 +108,12 @@ function new_preprocess_field(&$vars,$hook) {
 }
 */
 /*
-function new_preprocess_maintenance_page(){
+function refills_preprocess_maintenance_page(){
   //  kpr($vars['content']);
 }
 */
 
-function new_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+function refills_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   $form['actions']['submit'] = array('#type' => 'image_button', '#src' => 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png');
 }
 
