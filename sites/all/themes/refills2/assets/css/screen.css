@@ -484,14 +484,18 @@ ul.tabs {
   z-index: 9999; }
 
 #switchtheme-switch-form {
-  background-color: #fff;
-  opacity: .8;
+  height: 20px;
+  opacity: .6;
   position: absolute;
   right: -100px;
-  top: 13%; }
+  top: 100px;
+  z-index: 10; }
   #switchtheme-switch-form:before {
-    content: "Switch";
-    left: -100px;
+    background-color: #fff;
+    color: #000;
+    content: "Switch Themes";
+    left: -126px;
+    padding: 7%;
     position: absolute;
     top: 0; }
   #switchtheme-switch-form .form-actions {
