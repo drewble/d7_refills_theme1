@@ -56,12 +56,17 @@
 
 // SwitchTheme
 #switchtheme-switch-form {
+  display: none;
   height: 20px;
   opacity: .6;
   position: absolute;
   right: -100px;
   top: 100px;
   z-index: 10;
+
+  @include media($large-screen) {
+    display: block;
+  }
 
   &:before {
     background-color:#fff;
