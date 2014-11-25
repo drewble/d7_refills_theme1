@@ -54,4 +54,4 @@ features[variable][] = scheduler_publish_touch_news_article
 features[variable][] = scheduler_unpublish_enable_news_article
 features[views_view][] = news
 features_exclude[dependencies][ctools] = ctools
-mtime = 1416843342
+mtime = 1416861366

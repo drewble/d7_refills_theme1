@@ -1,0 +1,100 @@
+/* Application Template
+ * -----------------------------------------------------------------------------
+ * Styling for the structure of the site. If your element doesn't show up on
+ * every page, it probably shouldn't be in this file.
+ * -----------------------------------------------------------------------------*/
+
+/* Things to place in separate files...
+ * ---------------------------------------------------------------------------
+ * /extends/            => Sass extends declarations
+ * /mixins/             => Sass mixins declarations
+ * _buttons.scss
+ * _fonts.scss          => Font imports
+ * _forms.scss
+ * _lists.scss
+ * _library.scss        => Custom classes used throughout the app.
+ * _tables.scss
+ * _typography.scss
+ * _utilities.scss
+ * _variables.scss
+ * _component_name.scss => Styles for a component of functionality (e.g. – modal).
+ * _page_name.scss      => Styles for page specific elements.
+ * ---------------------------------------------------------------------------
+ */
+
+
+//
+// Main Content Area
+#main-content {
+  @include outer-container;
+  padding:0 4%;
+  @include media($very-large-screen) {
+    padding:0 6%;
+  }
+
+  > h1 {
+    line-height: 3em;
+  }
+}
+
+
+// Fade-In
+.js-fade-element-hide {
+  opacity: 0;
+}
+
+.js-fade-element-show {
+  @include transition (all 0.4s ease-in-out);
+  opacity: 1;
+}
+
+
+// Admin Menu
+#admin-menu {
+  z-index: 9999;
+}
+
+// SwitchTheme
+#switchtheme-switch-form {
+  display: none;
+  height: 20px;
+  opacity: .6;
+  position: absolute;
+  right: -100px;
+  top: 100px;
+  z-index: 10;
+
+  @include media($large-screen) {
+    display: block;
+  }
+
+  &:before {
+    background-color:#fff;
+    color: #000;
+    content:"Switch Theme";
+    left: -126px;
+    padding:7%;
+    position: absolute;
+    top:0;
+  }
+
+  #edit-widget {
+    padding: 7% 0;
+  }
+
+  .form-actions {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  &.show {
+    opacity: 1;
+    right: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+

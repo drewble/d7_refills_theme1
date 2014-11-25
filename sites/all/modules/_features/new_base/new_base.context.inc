@@ -32,12 +32,6 @@ function new_base_context_default_contexts() {
           'region' => 'hero',
           'weight' => '-10',
         ),
-        'views-news-block_3' => array(
-          'module' => 'views',
-          'delta' => 'news-block_3',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
       ),
     ),
   );
