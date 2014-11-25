@@ -34,8 +34,8 @@
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
   function initialize() {
-    var myLatlng = new google.maps.LatLng(59.342457, 18.057340);
-    var mapCenter = new google.maps.LatLng(59.340458, 18.057340);
+    var myLatlng = new google.maps.LatLng(36.178067, -86.788513);
+    var mapCenter = new google.maps.LatLng(36.178067, -86.788513);
     var mapCanvas = document.getElementById('map_canvas');
     var mapOptions = {
       center: mapCenter,
@@ -64,11 +64,10 @@
       '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">thoughtbot</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Centresource</h1>'+
       '<div id="bodyContent">'+
-      '<p>Sveavägen 98</p>'+
-      '<p>113 50 Stockholm</p>'+
-      '<p>Sweden</p>'+
+      '<p>1317 4th Ave North</p>'+
+      '<p>Nashville, TN 37208</p>'+
       '</div>'+
       '</div>';
 
@@ -80,7 +79,7 @@
     var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
-        title: 'thoughtbot (Sweden)'
+        title: 'Centresource (Nashville)'
     });
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(map,marker);
