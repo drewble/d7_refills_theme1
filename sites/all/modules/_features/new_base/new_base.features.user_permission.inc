@@ -64,33 +64,6 @@ function new_base_user_default_permissions() {
     'module' => 'themekey',
   );
 
-  // Exported permission: 'assign node themes'.
-  $permissions['assign node themes'] = array(
-    'name' => 'assign node themes',
-    'roles' => array(
-      'developer' => 'developer',
-    ),
-    'module' => 'themekey_ui',
-  );
-
-  // Exported permission: 'assign path alias themes'.
-  $permissions['assign path alias themes'] = array(
-    'name' => 'assign path alias themes',
-    'roles' => array(
-      'developer' => 'developer',
-    ),
-    'module' => 'themekey_ui',
-  );
-
-  // Exported permission: 'assign theme to own nodes'.
-  $permissions['assign theme to own nodes'] = array(
-    'name' => 'assign theme to own nodes',
-    'roles' => array(
-      'developer' => 'developer',
-    ),
-    'module' => 'themekey_ui',
-  );
-
   // Exported permission: 'delete all webform submissions'.
   $permissions['delete all webform submissions'] = array(
     'name' => 'delete all webform submissions',
