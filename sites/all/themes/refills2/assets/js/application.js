@@ -2,6 +2,16 @@
   (function($) {
     return $(function() {
       var element, menu, menuToggle;
+      $(".js-menu-trigger-2").on("click touchstart", function(e) {
+        $("body > nav").toggleClass("is-visible");
+        $(".js-menu-screen-2").toggleClass("is-visible");
+        return e.preventDefault();
+      });
+      $(".js-menu-screen-2").on("click touchstart", function(e) {
+        $("body > nav").toggleClass("is-visible");
+        $(".js-menu-screen-2").toggleClass("is-visible");
+        return e.preventDefault();
+      });
       menu = $("header nav");
       menuToggle = $(".centered-navigation-menu-button");
       $(menuToggle).on("click", function(e) {

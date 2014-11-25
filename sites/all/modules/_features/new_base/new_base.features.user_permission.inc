@@ -46,13 +46,49 @@ function new_base_user_default_permissions() {
     'module' => 'search',
   );
 
-  // Exported permission: 'administer switch'.
-  $permissions['administer switch'] = array(
-    'name' => 'administer switch',
+  // Exported permission: 'administer theme assignments'.
+  $permissions['administer theme assignments'] = array(
+    'name' => 'administer theme assignments',
     'roles' => array(
       'developer' => 'developer',
     ),
-    'module' => 'switchtheme',
+    'module' => 'themekey',
+  );
+
+  // Exported permission: 'administer themekey settings'.
+  $permissions['administer themekey settings'] = array(
+    'name' => 'administer themekey settings',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'themekey',
+  );
+
+  // Exported permission: 'assign node themes'.
+  $permissions['assign node themes'] = array(
+    'name' => 'assign node themes',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'themekey_ui',
+  );
+
+  // Exported permission: 'assign path alias themes'.
+  $permissions['assign path alias themes'] = array(
+    'name' => 'assign path alias themes',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'themekey_ui',
+  );
+
+  // Exported permission: 'assign theme to own nodes'.
+  $permissions['assign theme to own nodes'] = array(
+    'name' => 'assign theme to own nodes',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'themekey_ui',
   );
 
   // Exported permission: 'delete all webform submissions'.
@@ -100,26 +136,6 @@ function new_base_user_default_permissions() {
       'developer' => 'developer',
     ),
     'module' => 'search',
-  );
-
-  // Exported permission: 'select different theme'.
-  $permissions['select different theme'] = array(
-    'name' => 'select different theme',
-    'roles' => array(
-      'developer' => 'developer',
-    ),
-    'module' => 'switchtheme',
-  );
-
-  // Exported permission: 'switch theme'.
-  $permissions['switch theme'] = array(
-    'name' => 'switch theme',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-      'developer' => 'developer',
-    ),
-    'module' => 'switchtheme',
   );
 
   // Exported permission: 'use advanced search'.

@@ -14,13 +14,17 @@
   <a href="/" class="mobile-logo">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
   </a>
-  <button type="button" class="js-menu-trigger sliding-menu-button">
+  <button type="button" class="js-menu-trigger sliding-menu-button" data-menu="header nav">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
   </button>
 
+  <button type="button" class="js-menu-trigger-2 sliding-menu-button switch" data-menu="block-menu-menu-switch-themes">
+    <img src="/sites/all/themes/refills3/assets/images/pencil.png" alt="Menu Icon">
+  </button>
   <?php print render($page['header']); ?>
 
   <div class="js-menu-screen menu-screen"></div>
+  <div class="js-menu-screen-2 menu-screen"></div>
 </header>
 
 <?php if ($page['hero']): ?>

@@ -1,0 +1,21 @@
+.switch {
+  background-color: #2f2f2f;
+  border-radius: 0;
+  opacity: .2;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  img {
+    height: auto;
+    width: 1.2em;
+  }
+}
+
+.admin-menu .switch {
+  top:25px;
+}

@@ -70,9 +70,9 @@ function new_base_context_default_contexts() {
           'region' => 'nav_tools',
           'weight' => '-10',
         ),
-        'switchtheme-switch_form' => array(
-          'module' => 'switchtheme',
-          'delta' => 'switch_form',
+        'menu-menu-switch-themes' => array(
+          'module' => 'menu',
+          'delta' => 'menu-switch-themes',
           'region' => 'hero',
           'weight' => '-10',
         ),

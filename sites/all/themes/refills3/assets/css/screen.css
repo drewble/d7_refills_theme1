@@ -1082,7 +1082,7 @@ header.navigation {
   .sliding-menu-button img {
     height: 2em; }
 
-header nav {
+header nav, header nav.contextual-links-region, body > nav, body > nav.contextual-links-region {
   position: fixed;
   top: 0px;
   right: auto;
@@ -1102,26 +1102,38 @@ header nav {
   z-index: 999999;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
-  header nav li a {
+  header nav li a, header nav.contextual-links-region li a, body > nav li a, body > nav.contextual-links-region li a {
     border-bottom: 1px solid #333333;
     color: white;
     display: block;
     font-weight: bold;
     padding: 1em; }
-    header nav li a:hover {
+    header nav li a:hover, header nav.contextual-links-region li a:hover, body > nav li a:hover, body > nav.contextual-links-region li a:hover {
       background-color: #477dca;
       color: white; }
-  header nav.is-visible {
+  header nav.is-visible, header nav.contextual-links-region.is-visible, body > nav.is-visible, body > nav.contextual-links-region.is-visible {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0); }
-  header nav .expanded ul {
+  header nav .expanded ul, header nav.contextual-links-region .expanded ul, body > nav .expanded ul, body > nav.contextual-links-region .expanded ul {
     background-color: #7f7f7f; }
-    header nav .expanded ul a:after {
+    header nav .expanded ul a:after, header nav.contextual-links-region .expanded ul a:after, body > nav .expanded ul a:after, body > nav.contextual-links-region .expanded ul a:after {
       content: "-";
       margin-right: 4%; }
+
+body > nav, body > nav.contextual-links-region {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: auto;
+  -webkit-transform: translateX(220px);
+  -moz-transform: translateX(220px);
+  -ms-transform: translateX(220px);
+  -o-transform: translateX(220px);
+  transform: translateX(220px); }
 
 .menu-screen {
   position: fixed;
@@ -1529,6 +1541,19 @@ header nav {
   -moz-flex: 1 1 40em;
   -ms-flex: 1 1 40em;
   flex: 1 1 40em; }
+
+.switch {
+  background-color: #2f2f2f;
+  border-radius: 0;
+  opacity: .2;
+  position: fixed;
+  right: 0;
+  top: 0; }
+  .switch:hover {
+    opacity: 1; }
+  .switch img {
+    height: auto;
+    width: 1.2em; }
 
 .footer {
   background: #537fbe;

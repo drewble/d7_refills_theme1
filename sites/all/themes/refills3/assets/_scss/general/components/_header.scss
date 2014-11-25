@@ -622,7 +622,7 @@ $sliding-menu-color-hover: #fff;
   }
 }
 
-header nav {
+header nav, header nav.contextual-links-region, body > nav, body > nav.contextual-links-region {
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
@@ -656,6 +656,10 @@ header nav {
       margin-right: 4%;
     }
   }
+}
+body > nav, body > nav.contextual-links-region {
+  @include position(fixed, 0px 0px 0px auto);
+  @include transform(translateX(220px));
 }
 
 .menu-screen {
