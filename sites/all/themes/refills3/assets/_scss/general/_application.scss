@@ -22,6 +22,25 @@
  * ---------------------------------------------------------------------------
  */
 
+//
+// Header
+header {
+  @include outer-container();
+  margin: 3em auto;
+
+  .mobile-logo {
+    display: block;
+    float: left;
+
+    img {
+      width: 2.5em;
+    }
+  }
+
+  button {
+    float: right;
+  }
+}
 
 //
 // Main Content Area
@@ -29,7 +48,7 @@
   @include outer-container;
   padding:0 4%;
   @include media($very-large-screen) {
-    padding:0 6%;
+    padding:0;
   }
 
   > h1 {
@@ -61,7 +80,7 @@
   opacity: .6;
   position: absolute;
   right: -100px;
-  top: 100px;
+  top: 0;
   z-index: 10;
 
   @include media($large-screen) {

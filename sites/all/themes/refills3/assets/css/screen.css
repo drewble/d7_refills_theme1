@@ -456,6 +456,23 @@ ul.tabs {
  * _page_name.scss      => Styles for page specific elements.
  * ---------------------------------------------------------------------------
  */
+header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 3em auto; }
+  header:after {
+    content: "";
+    display: table;
+    clear: both; }
+  header .mobile-logo {
+    display: block;
+    float: left; }
+    header .mobile-logo img {
+      width: 2.5em; }
+  header button, header .button, header.navigation .sign-up {
+    float: right; }
+
 #main-content {
   max-width: 68em;
   margin-left: auto;
@@ -467,7 +484,7 @@ ul.tabs {
     clear: both; }
   @media screen and (min-width: 70em) {
     #main-content {
-      padding: 0 6%; } }
+      padding: 0; } }
   #main-content > h1 {
     line-height: 3em; }
 
@@ -489,7 +506,7 @@ ul.tabs {
   opacity: .6;
   position: absolute;
   right: -100px;
-  top: 100px;
+  top: 0;
   z-index: 10; }
   @media screen and (min-width: 53.75em) {
     #switchtheme-switch-form {
@@ -963,6 +980,78 @@ header.navigation {
             text-align: left;
             width: 12em; } }
 
+.sliding-menu-button {
+  display: inline-block;
+  background-color: #aaa;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 1.5;
+  padding: 0.5em .75em;
+  position: relative;
+  outline: none; }
+  .sliding-menu-button:hover {
+    background-color: #7f7f7f; }
+  .sliding-menu-button img {
+    height: 2em; }
+
+header nav {
+  position: fixed;
+  top: 0px;
+  right: auto;
+  bottom: 0px;
+  left: 0px;
+  height: 100%;
+  width: 220px;
+  -webkit-transform: translateX(-220px);
+  -moz-transform: translateX(-220px);
+  -ms-transform: translateX(-220px);
+  -o-transform: translateX(-220px);
+  transform: translateX(-220px);
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  background: #404040;
+  z-index: 999999;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
+  header nav li a {
+    border-bottom: 1px solid #333333;
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding: 1em; }
+    header nav li a:hover {
+      background-color: #477dca;
+      color: white; }
+  header nav.is-visible {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  header nav .expanded ul {
+    background-color: #7f7f7f; }
+    header nav .expanded ul a:after {
+      content: "-";
+      margin-right: 4%; }
+
+.menu-screen {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: #333333;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998; }
+  .menu-screen.is-visible {
+    opacity: .4;
+    visibility: visible; }
+
 .hero {
   background-color: #7f99be;
   background-repeat: no-repeat;
@@ -1241,6 +1330,119 @@ header.navigation {
     height: 100%;
     width: 4px;
     background: white; }
+
+.flex-boxes {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center; }
+  .flex-boxes:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.flex-box {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  box-flex: 2;
+  -webkit-flex: 2 2 15em;
+  -moz-flex: 2 2 15em;
+  -ms-flex: 2 2 15em;
+  flex: 2 2 15em;
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  align-self: stretch;
+  -ms-flex-item-align: stretch;
+  display: block;
+  box-shadow: inset 0 0 1px #999999, 0 2px 4px #e6e6e6;
+  border-radius: 3px;
+  margin: 0.4em;
+  padding: 2em 2em 3em 2em;
+  background: #f7f7f7; }
+  .flex-box:nth-child(1) {
+    border-top: 6px solid tomato; }
+    .flex-box:nth-child(1):hover {
+      background-color: rgba(255, 99, 71, 0.1); }
+  .flex-box:nth-child(2) {
+    border-top: 6px solid #72bfbf; }
+    .flex-box:nth-child(2):hover {
+      background-color: rgba(114, 191, 191, 0.1); }
+  .flex-box:nth-child(3) {
+    border-top: 6px solid #92b1e3; }
+    .flex-box:nth-child(3):hover {
+      background-color: rgba(146, 177, 227, 0.1); }
+  .flex-box:nth-child(4) {
+    border-top: 6px solid #e3d743; }
+    .flex-box:nth-child(4):hover {
+      background-color: rgba(227, 215, 67, 0.1); }
+  .flex-box:nth-child(5) {
+    border-top: 6px solid #cccccc; }
+    .flex-box:nth-child(5):hover {
+      background-color: rgba(204, 204, 204, 0.1); }
+  .flex-box:nth-child(6) {
+    border-top: 6px solid #f6c05c; }
+    .flex-box:nth-child(6):hover {
+      background-color: rgba(246, 192, 92, 0.1); }
+
+.flex-box img {
+  display: block;
+  opacity: .4;
+  height: 3em;
+  margin: auto;
+  margin-bottom: 2em; }
+
+.flex-box .flex-title {
+  color: rgba(51, 51, 51, 0.7);
+  font-family: "Sanchez", serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: .5em; }
+
+.flex-box p {
+  margin: auto;
+  line-height: 1.5em;
+  color: rgba(51, 51, 51, 0.6); }
+
+.flex-box-big {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 40em;
+  -moz-flex: 1 1 40em;
+  -ms-flex: 1 1 40em;
+  flex: 1 1 40em; }
 
 .footer {
   background: #537fbe;

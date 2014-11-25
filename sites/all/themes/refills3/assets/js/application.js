@@ -1,16 +1,16 @@
 (function() {
   (function($) {
     return $(function() {
-      var element, menu, menuToggle;
-      menu = $("header nav");
-      menuToggle = $(".centered-navigation-menu-button");
-      $(menuToggle).on("click", function(e) {
-        e.preventDefault();
-        return menu.slideToggle(function() {
-          if (menu.is(":hidden")) {
-            return menu.removeAttr("style");
-          }
-        });
+      var element;
+      $(".js-menu-trigger").on("click touchstart", function(e) {
+        $("header nav").toggleClass("is-visible");
+        $(".js-menu-screen").toggleClass("is-visible");
+        return e.preventDefault();
+      });
+      $(".js-menu-screen").on("click touchstart", function(e) {
+        $("header nav").toggleClass("is-visible");
+        $(".js-menu-screen").toggleClass("is-visible");
+        return e.preventDefault();
       });
       element = $(".fade-in-element");
       $(element).addClass("js-fade-element-hide");

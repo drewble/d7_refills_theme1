@@ -4,13 +4,16 @@
   $ ->
 
     #
-    # Navigation
-    menu = $("header nav")
-    menuToggle = $(".centered-navigation-menu-button")
-    $(menuToggle).on "click", (e) ->
+    # Sliding Menu
+    $(".js-menu-trigger").on "click touchstart", (e) ->
+      $("header nav").toggleClass "is-visible"
+      $(".js-menu-screen").toggleClass "is-visible"
       e.preventDefault()
-      menu.slideToggle ->
-        menu.removeAttr "style"  if menu.is(":hidden")
+
+    $(".js-menu-screen").on "click touchstart", (e) ->
+      $("header nav").toggleClass "is-visible"
+      $(".js-menu-screen").toggleClass "is-visible"
+      e.preventDefault()
 
 
     #
