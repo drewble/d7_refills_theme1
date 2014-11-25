@@ -1,0 +1,14 @@
+.front {
+  #main-content > h1 {
+    display: none;
+
+    & + div {
+      margin: 6em 0;
+    }
+  }
+
+  #map_canvas {
+    margin-top: 6em;
+  }
+}
+

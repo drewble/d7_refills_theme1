@@ -1,0 +1,172 @@
+// Default Content List Styles
+.content {
+  ol, ul {
+    margin: 0 1em;
+  }
+  ol {
+    list-style-type:decimal;
+  }
+  ul {
+    list-style-type:disc;
+  }
+}
+
+// Default view list styles - mothership may override these classes by default
+.view-content ul, .view-content ol {
+  margin: 0;
+  padding: 0;
+}
+.item-list ul li.views-row, .views-row {
+  list-style: none;
+  margin:0;
+  padding: 0;
+  position: relative;
+}
+
+//
+// Tabs
+ul.tabs {
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-content-background: $base-background-color;
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $base-background-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: $base-spacing;
+
+  li {
+    @include media($tab-mode) {
+      display: inline;
+    }
+  }
+
+  a {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    color: $dark-gray;
+    display: block;
+    font-weight: 400;
+    padding: $base-spacing/2 $gutter;
+
+    @include media($tab-mode) {
+      @include inline-block;
+      border-top: 0;
+    }
+
+    &:hover {
+      color: $base-link-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+  li.active a {
+    border-bottom: 0;
+
+    @include media($tab-mode) {
+      border: $tab-border;
+      border-bottom-color: $tab-active-background;
+      margin-bottom: -1px;
+    }
+  }
+}
+
+//
+// Breadcrumbs
+.breadcrumb {
+  $breadcrumb-border-color: $base-border-color;
+  $breadcrumb-border: 1px solid $breadcrumb-border-color;
+  $breadcrumb-height: $base-spacing * 1.5;
+  $breadcrumb-arrow-color: $breadcrumb-border-color;
+  $breadcrumb-background: $base-background-color;
+  $breadcrumb-inactive-hover-color: $breadcrumb-background;
+  $breadcrumb-color: $medium-gray;
+  $breadcrumb-color-hover: $base-accent-color;
+  $breadcrumb-color-active: $breadcrumb-color;
+
+  @include inline-block;
+  text-align: left;
+  margin-bottom: $base-spacing;
+
+  a {
+    @include inline-block;
+    background-color: $breadcrumb-background;
+    border: $breadcrumb-border;
+    border-left-color: transparent;
+    color: $breadcrumb-color;
+    line-height: $breadcrumb-height;
+    margin-right: -5px;
+    font-size: .8em;
+    padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
+    position: relative;
+    text-decoration: none;
+    margin-bottom: 2px;
+
+    &:first-child {
+      padding-left: $breadcrumb-height/2;
+      border-left-color: $breadcrumb-border-color;
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    &:last-child {
+      background-color: $breadcrumb-background;
+      border-left-color: transparent;
+      color: $breadcrumb-color-active;
+      border-bottom-right-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      padding-right: $breadcrumb-height/2;
+    }
+
+    &:first-child:last-child {
+      border-left-color:$breadcrumb-border-color;
+    }
+
+    &:hover {
+      color: $breadcrumb-color-hover;
+      background-color: $breadcrumb-inactive-hover-color;
+    }
+
+    &:hover:after {
+      border-left-color: $breadcrumb-inactive-hover-color;
+    }
+
+    &:after,
+    &:before {
+      @include position(absolute, 0px auto 0px 100%);
+      border-bottom: $breadcrumb-height/2 solid transparent;
+      border-left: $breadcrumb-height/4 solid transparent;
+      border-top: $breadcrumb-height/2 solid transparent;
+      content: '';
+      display: block;
+      margin: auto;
+      z-index: 2;
+    }
+
+    &:last-child:after,
+    &:last-child:before {
+       border: none;
+    }
+
+    &:before {
+      border-left-color: $breadcrumb-arrow-color;
+      margin-left: 1px;
+      z-index: 1;
+    }
+    &:after {
+      border-left-color: $breadcrumb-background;
+    }
+
+    @include media($medium-screen) {
+      font-size: 1em;
+      padding: 0 $breadcrumb-height/2 0 $breadcrumb-height/1.5;
+    }
+  }
+}

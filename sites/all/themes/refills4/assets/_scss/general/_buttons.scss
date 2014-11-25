@@ -1,0 +1,4 @@
+.button {
+  @extend button;
+  background-color: adjust-hue($base-accent-color, -50);
+}
