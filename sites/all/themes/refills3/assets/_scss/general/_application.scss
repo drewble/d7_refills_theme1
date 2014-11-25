@@ -27,6 +27,11 @@
 header {
   @include outer-container();
   margin: 3em auto;
+  padding:0 4%;
+
+  @include media($large-screen) {
+    padding:0;
+  }
 
   .mobile-logo {
     display: block;

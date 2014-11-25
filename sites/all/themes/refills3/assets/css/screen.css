@@ -322,6 +322,90 @@ article.type-system-geometric {
   article.type-system-geometric p.author {
     font-family: "Questrial", sans-serif; }
 
+.type-system-sans {
+  text-align: left; }
+  .type-system-sans:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .type-system-sans .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: "Titillium Web", sans-serif;
+    font-size: .7em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+    padding: .1em 0;
+    text-align: left;
+    text-transform: uppercase; }
+  .type-system-sans h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: .6em; }
+    @media screen and (min-width: 40em) {
+      .type-system-sans h1 {
+        font-size: 2.4em; } }
+  .type-system-sans h2 {
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 1.2em; }
+    @media screen and (min-width: 40em) {
+      .type-system-sans h2 {
+        font-size: 1.4em; } }
+  .type-system-sans code {
+    white-space: nowrap;
+    font-family: monaco;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: 4.5px;
+    padding: .1em .4em;
+    font-size: .65em;
+    font-style: normal; }
+  .type-system-sans h3 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    margin-bottom: .5em; }
+  .type-system-sans p.date {
+    color: rgba(51, 51, 51, 0.4);
+    font-family: "PT Sans", sans-serif;
+    font-size: .8em;
+    margin-bottom: .5em; }
+  .type-system-sans p {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1;
+    margin-bottom: 1.5em; }
+    .type-system-sans p span {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 600;
+      font-size: .8em;
+      text-transform: uppercase; }
+  .type-system-sans hr {
+    width: 3em; }
+  .type-system-sans a.read-more {
+    display: inline-block;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative; }
+    .type-system-sans a.read-more span {
+      position: absolute;
+      font-size: 1.7em;
+      top: -2px;
+      right: -10px; }
+  .type-system-sans p.author {
+    font-family: "PT Sans", sans-serif;
+    font-style: italic; }
+
 .content ol, .content ul {
   margin: 0 1em; }
 .content ol {
@@ -460,11 +544,15 @@ header {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  margin: 3em auto; }
+  margin: 3em auto;
+  padding: 0 4%; }
   header:after {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (min-width: 53.75em) {
+    header {
+      padding: 0; } }
   header .mobile-logo {
     display: block;
     float: left; }
@@ -567,7 +655,7 @@ header.navigation {
     color: rgba(255, 255, 255, 0.7);
     display: block;
     float: right;
-    font-family: "Questrial", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     line-height: 60px;
     margin: 0;
@@ -1104,8 +1192,6 @@ header nav {
       margin: 4em auto 6em;
       width: 60%; } }
   .intro-text h1 {
-    font-family: "Questrial", sans-serif;
-    font-weight: 800;
     margin-bottom: .3em; }
     @media screen and (min-width: 53.75em) {
       .intro-text h1 {
@@ -1425,7 +1511,7 @@ header nav {
 
 .flex-box .flex-title {
   color: rgba(51, 51, 51, 0.7);
-  font-family: "Sanchez", serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 500;
   font-size: 1.5em;
   margin-bottom: .5em; }
@@ -1501,6 +1587,64 @@ header nav {
     margin: auto;
     max-width: 35em;
     text-align: center; }
+
+.footer-2 {
+  background: #40526b;
+  padding: 1.5em;
+  width: 100%; }
+  .footer-2 .footer-logo {
+    margin-right: 1em;
+    margin-bottom: 1em; }
+    @media screen and (min-width: 53.75em) {
+      .footer-2 .footer-logo {
+        float: left;
+        margin-bottom: 0; } }
+  .footer-2 .title {
+    display: none; }
+  .footer-2 .footer-logo img {
+    height: 1.6em; }
+  .footer-2 .footer-links {
+    margin-bottom: 1em; }
+    @media screen and (min-width: 53.75em) {
+      .footer-2 .footer-links {
+        float: left;
+        margin-left: 1em;
+        margin-bottom: 0; } }
+  .footer-2 ul li {
+    padding-right: 1em;
+    font-weight: 800; }
+    @media screen and (min-width: 53.75em) {
+      .footer-2 ul li {
+        display: inline;
+        text-align: left; } }
+  .footer-2 ul li a {
+    color: rgba(255, 255, 255, 0.4); }
+    .footer-2 ul li a:hover {
+      color: white; }
+  @media screen and (min-width: 53.75em) {
+    .footer-2 .footer-secondary-links {
+      float: right; } }
+  .footer-2 .footer-secondary-links li {
+    font-size: .8em;
+    font-weight: 400; }
+  .footer-2 .footer-secondary-links ul.footer-social {
+    margin-top: 1em; }
+    @media screen and (min-width: 53.75em) {
+      .footer-2 .footer-secondary-links ul.footer-social {
+        float: right;
+        margin-top: 0; } }
+    .footer-2 .footer-secondary-links ul.footer-social li {
+      float: left;
+      font-size: 1em;
+      padding-right: .7em; }
+      .footer-2 .footer-secondary-links ul.footer-social li:last-child {
+        padding-right: 0; }
+    .footer-2 .footer-secondary-links ul.footer-social img {
+      opacity: .7;
+      height: 1.6em;
+      padding: 1px; }
+      .footer-2 .footer-secondary-links ul.footer-social img:hover {
+        opacity: 1; }
 
 /* Pages
  * -----------------------------------------------------------------------------*/

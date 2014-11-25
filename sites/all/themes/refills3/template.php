@@ -21,9 +21,8 @@ function refills3_preprocess_html(&$vars) {
 function refills3_preprocess_page(&$vars,$hook) {
 
   //googlefont
-  drupal_add_css('//fonts.googleapis.com/css?family=Questrial','external');
-  drupal_add_css('//fonts.googleapis.com/css?family=Sanchez:400italic,400','external');
-
+  drupal_add_css('//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic','external');
+  drupal_add_css('//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200','external');
 }
 
 /*
