@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Featurettes feature.
+ */
+
+include_once 'featurettes.features.inc';
